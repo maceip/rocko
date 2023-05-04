@@ -10,7 +10,6 @@ datasource db {
   url      = env("PRISMA_DATA_PROXY")
 }
 
-
 model AuthUser {
   id           String        @id @unique
   username     String        @unique

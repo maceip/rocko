@@ -8,7 +8,7 @@ import {
 	zod$
 } from "@builder.io/qwik-city";
 import { auth } from "~/lib/lucia";
-import { Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client/edge";
 import { LuciaError } from "lucia-auth";
 
 export const useUserLoader = routeLoader$(async (event) => {

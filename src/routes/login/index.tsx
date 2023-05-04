@@ -1,4 +1,4 @@
-import { component$, $, QwikSubmitEvent } from "@builder.io/qwik";
+import { component$, $ } from "@builder.io/qwik";
 import {
 	Link,
 	routeLoader$,
@@ -21,7 +21,6 @@ export const useUserLoader = routeLoader$(async (event) => {
 });
 
 const formSchema = z.array(z.array(z.string().nonempty(), z.string().nonempty()),z.array(z.string().nonempty(), z.string().nonempty()));
-type preflightLoginForm = z.infer<typeof formSchema>;
 
 
 export const useLoginAction = routeAction$(
